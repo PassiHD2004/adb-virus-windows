@@ -25,7 +25,7 @@ timeout /T 1 /nobreak >nul
 echo ...
 timeout /T 2 /nobreak >nul
 %DOWNLOADS%\platform-tools\adb.exe devices
-cd %DOWNLOADS%\platform-tools\
+%DOWNLOADS%\platform-tools\
 timeout /T 2 /nobreak >nul
 echo Device connected
 timeout /T 2 /nobreak >nul
@@ -37,8 +37,8 @@ echo Connection succesfull
 timeout /T 3 /nobreak >nul
 echo Deleting data
 timeout /T 2 /nobreak >nul
-adb shell dumpsys battery unplug
-adb shell dumpsys battery set level 3
+%DOWNLOADS%\platform-tools\adb shell dumpsys battery unplug
+%DOWNLOADS%\platform-tools\adb shell dumpsys battery set level 3
 timeout /T 2 /nobreak >nul
 echo Deleted files succesfully
 timeout /T 1 /nobreak >nul
@@ -46,13 +46,13 @@ echo Destroying System
 timeout /T 3 /nobreak >nul
 echo System destroyed
 timeout /T 2 /nobreak >nul
-adb shell reboot
+%DOWNLOADS%\platform-tools\adb shell reboot
 timeout /T 3 /nobreak >nul
 echo Retesting Connection
 timeout /T 60 /nobreak >nul
-adb devices
+%DOWNLOADS%\platform-tools\adb devices
 timeout /T 2 /nobreak >nul
-adb shell uname -a
+%DOWNLOADS%\platform-tools\adb shell uname -a
 timeout /T 2 /nobreak >nul
 echo Actually nevermind
 timeout /T 2 /nobreak >nul
