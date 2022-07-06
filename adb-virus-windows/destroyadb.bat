@@ -1,15 +1,15 @@
 @echo off
-timeout 1
+timeout /T 1 /nobreak
 echo Hey
-timeout 2
+timeout /T 2 /nobreak
 echo Your device is being connected
-timeout 1
+timeout /T 1 /nobreak
 echo .
-timeout 1
+timeout /T 1 /nobreak
 echo ..
-timeout 1
+timeout /T 1 /nobreak
 echo ...
-timeout 2
+timeout /T 2 /nobreak
 adb devices >> output.txt
-timeout 2
+timeout /T 2 /nobreak
 if 
